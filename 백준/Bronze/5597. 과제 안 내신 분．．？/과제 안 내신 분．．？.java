@@ -1,0 +1,23 @@
+
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		boolean[] submitted = new boolean[31];
+		// 인덱스를 1~30까지 쓰기 위해 31칸 준비
+
+		// 28명 입력받기
+		for (int i = 0; i < 28; i++) {
+			int num = sc.nextInt();
+			submitted[num] = true; // 제출 표시
+		}
+
+		// 제출하지 않은 학생 찾기
+		for (int i = 1; i <= 30; i++) {
+			if (!submitted[i]) { // 제출 안 한 경우
+				System.out.println(i);
+			}
+		}
+	}
+}
